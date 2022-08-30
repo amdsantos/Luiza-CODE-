@@ -1,0 +1,6 @@
+print('-------- EXERCÍCIO 16 --------')
+valor_emprestimo = float(input("Informe o valor total emprestado: "))
+taxa = float(input("Informe o valor da taxa de juros mensal: "))
+tempo = int(input("Informe a quantidade total de parcelas: "))
+valor_final = valor_emprestimo + (valor_emprestimo * taxa * tempo)
+print(f'O valor final que pagara ao banco é de R$ {valor_final} reais')

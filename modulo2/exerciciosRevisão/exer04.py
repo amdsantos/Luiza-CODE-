@@ -11,6 +11,7 @@ class Professor:
    
         
     
-pessoa = Professor('João', 25, 1500).get_dados()
-
-print(pessoa)
+user1 = Professor('João', 25, 1500).get_dados()
+user2 = Professor('Pedro', 25, 1500).get_dados()
+print(user1, '\n')
+print(user2)

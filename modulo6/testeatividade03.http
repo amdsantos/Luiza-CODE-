@@ -1,0 +1,44 @@
+###
+#
+# Testar API do playlist
+
+###
+# Ver se aplicação está rodando
+GET http://localhost:8000/
+
+###
+# Cadastro de música
+POST http://localhost:8000/musicas
+
+{
+    "nome": "Patience",
+    "artista": "Gun 'n Rose",
+    "tempo": 120
+}
+
+###
+# Cadastro de música incorreto
+POST http://localhost:8000/musicas
+
+{
+    "nome": "Patience"
+}
+
+###
+# Cadastro de música incorreto
+POST http://localhost:8000/musicas
+
+{
+    "nome": "Faroete Cabloco",
+    "artista": "Legião Urbana",
+    "tempo": 1
+}
+
+###
+# Pesquisar todos
+GET http://localhost:8000/musicas
+
+###
+# Pesquisar pelo código
+GET http://localhost:8000/musicas/3
+

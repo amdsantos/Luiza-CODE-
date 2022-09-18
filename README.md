@@ -1,6 +1,6 @@
 <div align="center" id='topo'>
     <h2>💙 5ª Edição Luiza Code 💙</h2>
-    <h3>Repositório dedicado aos exercícios e atividades desenvolvidos durante o bootcamp de Python.</h3>
+    <h3>Repositório dedicado aos exercícios e atividades desenvolvidos durante o bootcamp.</h3>
     <img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" title = "PYTHON"/>
 </div>
 

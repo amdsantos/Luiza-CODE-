@@ -26,15 +26,15 @@ async def get_address_user(address_collection):
     # address_user = await users_collection.find_one({'anddress': address})
     # return address_user
 
-async def update_address(address_collection):
+async def update_address(address_collection, address_user):
     try:
         address_user == address_user
         
         address_user = await address_collection.update_one(
-            {"_id": "{address._id}"},
+            {'user._id': USER[id]},
             {
-                "$addToSet": {
-                    "address": {address}
+                '$addToSet': {
+                    'address': {address_user}
                 }
             }
         );           

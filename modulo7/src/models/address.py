@@ -1,58 +1,54 @@
-# USADO PARA FAZER VALIDAÇÃO, MAS NÃO VAMOS USAR AGORA
-# IMPORTAR A VALIDÃÇÃO => from src.schemas.user import UserSchema
-#async def create_user(users_collection, AQUI ESTOU CHAMANDO A FUNÇÃO => user: UserSchema):
+import user
+import address
 
+
+USER = (user.find({'id': {id}}))
+
+address_user = address.find({'user._id': USER[id]})
 
 async def create_address(address_collection):
+    
     try:
-        address = await address_collection.insert_one(address)
-
-        if address.inserted_id:
-            address = await get_address(address_collection, address.inserted_id)
-            return address
+        address_user == None
+        
+        if user.iserted_address:
+            address_user =  await address_collection.insert_one({'user': {user, 'address': {address}}})
+        return address_user
 
     except Exception as e:
         print(f'create_address.error: {e}')
 
-async def get_address(users_collection, user_id):
+async def get_address_user(address_collection):
+    
+    address_user = await address_collection.find({'user._id': USER[id]})
+    return address_user
+
+    # address_user = await users_collection.find_one({'anddress': address})
+    # return address_user
+
+async def update_address(address_collection):
     try:
-        data = await users_collection.find_one({'_id': user_id})
-        if data:
-            return data
+        address_user == address_user
+        
+        address_user = await address_collection.update_one(
+            {"_id": "{address._id}"},
+            {
+                "$addToSet": {
+                    "address": {address}
+                }
+            }
+        );           
+
     except Exception as e:
-        print(f'get_user.error: {e}')
+        print(f'update_address.error: {e}')
 
-async def get_users(users_collection, skip, limit):
+async def delete_address(address_collection, user):
     try:
-        user_cursor = users_collection.find().skip(int(skip)).limit(int(limit))
-        users = await user_cursor.to_list(length=int(limit))
-        return users
-
-    except Exception as e:
-        print(f'get_users.error: {e}')
-
-async def update_user(users_collection, user_id, user_data):
-    try:
-        data = {k: v for k, v in user_data.items() if v is not None}
-
-        user = await users_collection.update_one(
-            {'_id': user_id},
-            {'$set': data}
-        )
-
-        if user.modified_count:
-            return True, user.modified_count
-
-        return False, 0
-    except Exception as e:
-        print(f'update_user.error: {e}')
-
-async def delete_user(users_collection, user_id):
-    try:
-        user = await users_collection.delete_one(
-            {'_id': user_id}
-        )
+        address_user = await address_collection.delete_one(
+            {'user._address': address_user}
+            )
         if user.deleted_count:
-            return {'status': f'{user_id} deleted'}
+            return {'status': f'{address_user} deleted'}
+        
     except Exception as e:
-        print(f'delete_user.error: {e}')
+        print(f'delete_address.error: {e}')

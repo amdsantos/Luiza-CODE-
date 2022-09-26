@@ -1,5 +1,3 @@
-from itertools import product
-
 
 async def create_product(products_collection):
     try:
@@ -19,7 +17,7 @@ async def get_product(products_collection, product_id):
             return data
         
     except Exception as e:
-        print(f'get_user.error: {e}')
+        print(f'get_product.error: {e}')
 
 async def get_products(products_collection, skip, limit):
     try:
@@ -29,13 +27,6 @@ async def get_products(products_collection, skip, limit):
 
     except Exception as e:
         print(f'get_products.error: {e}')
-
-async def update_product():
-    try:
-        pass
-
-    except Exception as e:
-        print(f'update_product.error: {e}')
 
 async def delete_product(products_collection, product_id):
     try:

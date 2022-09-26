@@ -1,5 +1,5 @@
 def validate_multiplos(number):
-    print("Caiu no método")
+    # print("Caiu no método")
     number = int(number)
     if number == 3:
         return "Multiplo de 3"

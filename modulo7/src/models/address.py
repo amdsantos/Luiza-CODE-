@@ -1,10 +1,10 @@
 import user
-
+import address
 
 
 USER = (user.find({'id': {id}}))
 
-address_user = address_collection.find({'user._id': USER[id]})
+address_user = address.find({'user._id': USER[id]})
 
 async def create_address(address_collection):
     
